@@ -4,21 +4,27 @@
         <p>+45 93869610</p>
         <p>kontakt@holdiaand.dk</p>
         <div class="ikoner">
-            <img src="public/img/ig.svg" alt="">
-            <img src="public/img/fb.svg" alt="">
-            <img src="public/img/spotify.svg" alt="">
-            <img src="public/img/yt.svg" alt="">
+            <img src="/img/ig.svg" alt="instagram">
+            <img src="/img/fb.svg" alt="facebook">
+            <img src="/img/spotify.svg" alt="spotify">
+            <img src="/img/yt.svg" alt="youtube">
         </div>
     </div>
 </footer>
 
 <style>
+
+@media (min-width: 650px){
+    footer{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 .nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-}
+    font-weight: bold;
+}}
 .ikoner{
     display: flex;
     flex-direction: row;
@@ -26,5 +32,9 @@
 img{
     padding: 5px;
 }
+
+/* mobil styles:*/
+
+
 
 </style>
