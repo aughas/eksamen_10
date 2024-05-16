@@ -3,3 +3,37 @@
 ---
 
 
+<h1 class="scrolling-banner">OM HOLD I HÅND OM HOLD I HÅND OM HOLD I HÅND OM HOLD I HÅND </h1>
+
+<style>
+    .scrolling-banner {
+  margin-top: 0px;
+  white-space: nowrap;
+  animation: scrollBanner 0.3s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(-130%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+</style>
+
+<script>
+    window.addEventListener(
+  "scroll",
+  () => {
+    document.body.style.setProperty("--scroll", window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+  },
+  false
+);
+
+</script>
