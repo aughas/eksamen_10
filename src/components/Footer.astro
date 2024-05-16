@@ -2,19 +2,19 @@
     <div class="nav">
         <p>HoldiHånd Management</p>
         <p>+45 93869610</p>
-        <p>kontakt@holdiaand.dk</p>
+        <p>kontakt@holdihaand.dk</p>
         <div class="ikoner">
-            <img src="/img/ig.svg" alt="instagram">
-            <img src="/img/fb.svg" alt="facebook">
-            <img src="/img/spotify.svg" alt="spotify">
-            <img src="/img/yt.svg" alt="youtube">
+            <img id="ig" src="/img/ig.svg" alt="instagram">
+            <img id="fb" src="/img/fb.svg" alt="facebook">
+            <img id="sp" src="/img/spotify.svg" alt="spotify">
+            <img id="yt" src="/img/yt.svg" alt="youtube">
         </div>
     </div>
 </footer>
 
 <style>
 
-@media (min-width: 650px){
+@media (min-width: 1000px){
     footer{
         margin-left: 30px;
         margin-right: 30px;
@@ -26,13 +26,31 @@
 }}
 footer{
     font-weight: bold;
+    text-align: center;
 }
 .ikoner{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+p{
+    margin-bottom: 10px;
 }
 img{
     padding: 5px;
+}
+/*ikoner byter färg */
+#ig:hover{
+    content: url("/img/ig_hov.svg");
+}
+#fb:hover{
+    content: url("/img/fb_hov.svg");
+}
+#sp:hover{
+    content: url("/img/spotify_hov.svg");
+}
+#yt:hover{
+    content: url("/img/yt_hov.svg");
 }
 
 /* mobil styles:*/
