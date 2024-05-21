@@ -3,14 +3,21 @@ import Mainlayout from "../layout/Mainlayout.astro"
 import "../styles/style.css"
 import Banner from "../components/Banner.astro"
 import Nav from "../components/Nav.astro"
+import Kalender from "../components/Kalender.astro"
 ---
 
 <Mainlayout>
     <Nav>
-        <slot />
+
     </Nav>
+    <div id="omos"></div>
 <Banner text = "OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;"/>
+<div id="kunstnere"></div>
 <Banner text = "KUNSTNERE&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;"/>
+<div id="events"></div>
 <Banner text = "EVENT KALENDER&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;"/>
+<Kalender>
+    
+</Kalender>
 <Banner text = "NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;"/>
 </Mainlayout>
