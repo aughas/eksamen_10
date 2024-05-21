@@ -1,37 +1,95 @@
 <section>
-<div class="omos">
-    <a href="#">
-        <div class="knap1">
- </div>
-</a>
-</div>
-<div class="kunstnere">
-    <a href="#">
-        <div class="knap2">
- </div>
-</a>
-</div>
-<div class="events">
-    <a href="#">
-        <div class="knap3">
- </div>
-</a>
-</div>
-</section>
-
-<style>
-
-@media (min-width: 650px){
-    .omos{
-        background-image: url(/img/);
-    }
-    section{
-        display: flex;
-        flex-direction: row;
-    }
-.knap1, .knap2, .knap3{
+    <div class="omos">
+      <a href="#omos">
+        <div class="knap1"><p>Om HoldiHånd</p></div>
+      </a>
+    </div>
+    <div class="kunstnere">
+      <a href="#kunstnere">
+        <div class="knap2"><p>Kunstnere</p></div>
+      </a>
+    </div>
+    <div class="events">
+      <a href="#events">
+        <div class="knap3"><p>Events</p></div>
+      </a>
+    </div>
+  </section>
+  
+  <style>
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+  section p{
+    color: var(--background_col); 
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .omos, .kunstnere, .events {
+    position: relative;
+    width: 134px; /* Justera detta till bildens bredd */
+    height: 201.83px; /* Justera detta till bildens höjd */
+    background-size: cover;
+  }
+  
+  .omos {
+    background-image: url(/img/omos.webp);
+  }
+  
+  .kunstnere {
+    background-image: url(/img/kunstnere.webp);
+  }
+  
+  .events {
+    background-image: url(/img/events.webp);
+  }
+  
+  .knap1, .knap2, .knap3 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 258px;
     height: 81px;
     background-color: var(--lysgrå_col);
-}}
-</style>
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+  }
+
+  .knap1, .knap2, .knap3 {
+      width: 116px;
+      height: 36px;
+    }
+    @media (min-width: 500px){
+
+        .knap1, .knap2, .knap3 {
+      width: 155px;
+      height: 50px;
+    }
+    .omos, .kunstnere, .events {
+    position: relative;
+    width: 300px;
+    height: 500px; 
+    background-size: cover;
+  }
+    }
+  @media (min-width: 820px) {
+    section p{
+    font-size: 30px;
+  }
+    .knap1, .knap2, .knap3 {
+      width: 258px;
+      height: 81px;
+    }
+    .omos, .kunstnere, .events {
+    position: relative;
+    width: 485px;
+    height: 673px; 
+    background-size: cover;
+  }
+  }
+  </style>
+  
