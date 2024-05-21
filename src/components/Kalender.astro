@@ -1,9 +1,16 @@
-<section>
-<h4>Sjælden Fugl</h4>
-<p class="bold">Distortion</p>
-<p>Nørrebro</p>
-<p>30 maj 2024</p>
-</section>
+---
+const header = Astro.props.header;
+const header2 = Astro.props.header2;
+const text = Astro.props.text;
+const text2 = Astro.props.text2;
+---
+
+<article>
+<h4>{header}</h4>
+<p class="bold">{header2}</p>
+<p>{text}</p>
+<p>{text2}</p>
+</article>
 
 <style>
     .bold{
