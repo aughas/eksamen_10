@@ -2,9 +2,13 @@
 import Mainlayout from "../layout/Mainlayout.astro"
 import "../styles/style.css"
 import Banner from "../components/Banner.astro"
+import Nav from "../components/Nav.astro"
 ---
 
 <Mainlayout>
+<Nav>
+    <slot />
+</Nav>
 <Banner text = "OM HOLD I HAND"/>
 <Banner text = "KUNSTNERE KUNSTNERE"/>
 <Banner text = "EVENT KALENDER"/>
