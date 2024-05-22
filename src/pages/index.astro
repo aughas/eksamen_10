@@ -16,8 +16,31 @@ import Kalender from "../components/Kalender.astro"
 <Banner text = "KUNSTNERE&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;"/>
 <div id="events"></div>
 <Banner text = "EVENT KALENDER&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;"/>
+<article class="kalender">
 <Kalender header="Sjælden Fugl" header2="Distortion" text="Nørrebro" text2="30 maj 2024"/>
 <Kalender header="Sangt" header2="Way Out West" text="Nørrebro" text2="30 maj 2024"/>
 <Kalender header="Sjælden Fugl" header2="Distortion" text="Nørrebro" text2="30 maj 2024"/>
+</article>
 <Banner text = "NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;"/>
 </Mainlayout>
+
+<style>
+.kalender{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    justify-items: center; /* Centrera items horisontellt inom sina grid-celler */
+    gap: 20px; /* Om du vill ha ett mellanrum mellan grid items */
+}
+
+@media (min-width: 650px) {
+    .kalender{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    justify-items: center; /* Centrera items horisontellt inom sina grid-celler */
+    gap: 20px; /* Om du vill ha ett mellanrum mellan grid items */
+}}
+</style>
