@@ -19,7 +19,6 @@ html {
 
 body {
   background-color: var(--background_col);
-  min-height: 700vh;
 }
 
 h1,

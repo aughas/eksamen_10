@@ -7,9 +7,7 @@ import Kalender from "../components/Kalender.astro"
 ---
 
 <Mainlayout>
-    <Nav>
-
-    </Nav>
+    <Nav></Nav>
     <div id="omos"></div>
 <Banner text = "OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;"/>
 <div id="kunstnere"></div>
@@ -17,9 +15,16 @@ import Kalender from "../components/Kalender.astro"
 <div id="events"></div>
 <Banner text = "EVENT KALENDER&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;"/>
 <article class="kalender">
+<!--Gøra header2 till link?? -->
 <Kalender header="Sjælden Fugl" header2="Distortion" text="Nørrebro" text2="30 maj 2024"/>
-<Kalender header="Sangt" header2="Way Out West" text="Nørrebro" text2="30 maj 2024"/>
+<Kalender header="Sangt" header2="Way Out West" text="Slottsskogen" text2="11 augusti 2024"/>
+<Kalender header="Esther Oxfeldt" header2="V1 Gallery" text="Kødbyen" text2="22 september 2024"/>
 <Kalender header="Sjælden Fugl" header2="Distortion" text="Nørrebro" text2="30 maj 2024"/>
+<Kalender header="Sangt" header2="Way Out West" text="Slottsskogen" text2="11 augusti 2024"/>
+<Kalender header="Esther Oxfeldt" header2="V1 Gallery" text="Kødbyen" text2="22 september 2024"/>
+<Kalender header="Sjælden Fugl" header2="Distortion" text="Nørrebro" text2="30 maj 2024"/>
+<Kalender header="Sangt" header2="Way Out West" text="Slottsskogen" text2="11 augusti 2024"/>
+<Kalender header="Esther Oxfeldt" header2="V1 Gallery" text="Kødbyen" text2="22 september 2024"/>
 </article>
 <Banner text = "NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;"/>
 </Mainlayout>
@@ -30,8 +35,7 @@ import Kalender from "../components/Kalender.astro"
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-content: center;
-    justify-items: center; /* Centrera items horisontellt inom sina grid-celler */
-    gap: 20px; /* Om du vill ha ett mellanrum mellan grid items */
+    gap: 20px;
 }
 
 @media (min-width: 650px) {
@@ -40,7 +44,9 @@ import Kalender from "../components/Kalender.astro"
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-content: center;
+    gap: 20px;
     justify-items: center; /* Centrera items horisontellt inom sina grid-celler */
-    gap: 20px; /* Om du vill ha ett mellanrum mellan grid items */
 }}
+
+
 </style>
