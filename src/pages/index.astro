@@ -30,16 +30,19 @@ import Form from "../components/Form.astro"
 <Kalender header="Esther Oxfeldt" header2="V1 Gallery" text="Kødbyen" text2="22 september 2024"/>
 </article>
 <Banner text = "NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;"/>
-<Form></Form>
+<article> 
+<p class="bold">Tilmeld dig vores nyhedsbrev.</p>
+<Form />
+</article>
 </Mainlayout>
 
 <style>
 .kalender{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-content: center;
     gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 @media (min-width: 650px) {
@@ -48,8 +51,8 @@ import Form from "../components/Form.astro"
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-content: center;
-    gap: 20px;
     justify-items: center;
+    gap: 30px;
 }}
 
 
