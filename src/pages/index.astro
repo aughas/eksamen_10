@@ -34,10 +34,11 @@ import Hero from "../components/Hero.astro"
 <Kalender header="Esther Oxfeldt" header2="V1 Gallery" text="Kødbyen" text2="22 september 2024"/>
 </article>
 <!-- <Banner text = "NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;"/>-->
+<div class="webf">
 <article class="nyhedsbrev"> 
 <p class="tilmeld">Tilmeld dig vores nyhedsbrev.</p>
 <Form />
-</article>
+</article></div>
 </Mainlayout>
 
 <style>
@@ -76,7 +77,11 @@ import Hero from "../components/Hero.astro"
     justify-items: center;
     gap: 30px;
     padding: 0 50px 30px 50px;
-}}
+}
+.nyhedsbrev{
+    margin-bottom: 200px;
+}
+}
 
 
 </style>
