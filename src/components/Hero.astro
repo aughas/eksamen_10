@@ -35,24 +35,17 @@
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 258px;
-    height: 81px;
     background-color: var(--lysgrå_col);
     display: flex;
     align-items: center;
-    justify-content: center;    
-  }
-
-  .knap {
-      width: 116px;
-      height: 36px;
-      font-family: "Arimo", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    justify-content: center; 
+    width: 116px;
+    height: 36px;
   color: var(--background_col);
   font-weight: bold;
-  font-size: 15px;
-    }
+  font-size: 15px;   
+  transition: width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
+  }
 
     @media (min-width: 650px){
         .gif{
@@ -62,6 +55,11 @@
         .logo{
             width: 20%;
         }
+        .knap {
+      width: 258px;
+      height: 81px;
+      font-size: 30px;
+    }
         .knap:hover { 
       width: 284px;
       height: 99px;
