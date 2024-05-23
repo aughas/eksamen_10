@@ -1,6 +1,7 @@
 ---
 
 ---
+<div class="hero_container">
 <img class="logo" src="/img/logov1.png" alt="logo">
 <img class="gif" src="/img/hih.gif" alt="gif">
 
@@ -10,8 +11,13 @@
     </a>
   </div>
   <div class="scroll-down"></div>
+</div>
 
 <style>
+    .hero_container{
+        position: relative;
+        margin-bottom: 70px;
+    }
     .gif {
         display: block;
         width: 1440px;
@@ -32,7 +38,7 @@
     /* knap */
     .knap {
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--lysgrå_col);
@@ -53,7 +59,7 @@
     background: #c4c4c4;
     bottom: 0;
     display: inline-block;
-    height: 140px;
+    height: 80px;
     left: 0;
     margin: 0 auto;
     overflow: hidden;
@@ -104,6 +110,9 @@
       width: 284px;
       height: 99px;
       font-size: 35px;
+    }
+    .scroll-down{
+        height: 140px;
     }
     }
 </style>
