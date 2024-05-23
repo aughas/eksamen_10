@@ -1,18 +1,71 @@
 ---
 
 ---
+<img class="logo" src="/img/logov1.png" alt="logo">
+<img class="gif" src="/img/hih.gif" alt="gif">
 
-<img class="gif" src="/img/hih.gif" alt="vid">
+<div class="kunstnere">
+    <a href="#kunstnere">
+      <div class="knap">Kunstnere</div>
+    </a>
+  </div>
 
 <style>
-    <style>
     .gif {
         display: block;
-        width: 100%;
+        width: 1440px;
         height: 400px;
         object-fit: cover;
         object-position: center;
         opacity: 80%;
     }
-</style>
+
+    .logo{
+        position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 40%;
+    }
+
+    /* knap */
+    .knap {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 258px;
+    height: 81px;
+    background-color: var(--lysgrå_col);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+  }
+
+  .knap {
+      width: 116px;
+      height: 36px;
+      font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--background_col);
+  font-weight: bold;
+  font-size: 15px;
+    }
+
+    @media (min-width: 650px){
+        .gif{
+            width: 1440px;
+            height: 660px;
+        }
+        .logo{
+            width: 20%;
+        }
+        .knap:hover { 
+      width: 284px;
+      height: 99px;
+      font-size: 35px;
+    }
+    }
 </style>
