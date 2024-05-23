@@ -11,7 +11,9 @@ import Hero from "../components/Hero.astro"
 
 <Mainlayout>
     <Hero></Hero>
+    <div class="webf">
     <Nav></Nav>
+</div>
     <div id="omos"></div>
 <!-- <Banner text = "OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;OM HOLDIHÅND&nbsp;&nbsp;"/>-->
 <Omos></Omos>
@@ -53,6 +55,17 @@ import Hero from "../components/Hero.astro"
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.webf{
+            scale: .8; opacity: 0;
+            animation: fade-in linear forwards;
+            animation-timeline: view();
+            animation-range: 100px 300px;
+        }
+        @keyframes fade-in {
+            to{scale: 1; opacity: 1;}
+        }
+        
 
 @media (min-width: 650px) {
     .kalender{
