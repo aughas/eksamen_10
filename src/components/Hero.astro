@@ -6,15 +6,15 @@
 
 <div class="kunstnere">
     <a href="#kunstnere">
-      <div class="knap">Kunstnere</div>
+      <div class="knap">UDFORSKE KUNSTNERE</div>
     </a>
   </div>
+  <div class="scroll-down"></div>
 
 <style>
     .gif {
         display: block;
         width: 1440px;
-        height: 400px;
         object-fit: cover;
         object-position: center;
         opacity: 80%;
@@ -38,6 +38,7 @@
     background-color: var(--lysgrå_col);
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center; 
     width: 116px;
     height: 36px;
@@ -45,6 +46,45 @@
   font-weight: bold;
   font-size: 15px;   
   transition: width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
+  z-index: 4;
+  }
+
+  .scroll-down{
+    background: #c4c4c4;
+    bottom: 0;
+    display: inline-block;
+    height: 140px;
+    left: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 2px;
+    margin-bottom: -35px;
+  }
+  .scroll-down::before{
+    animation: scrollDown 1.5s infinite;
+    background: #fff;
+    content: '';
+    display: inline-block;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    z-index: 1;
+  }
+
+  @keyframes scrollDown {
+    0%{
+        transform: translate3d(0, -32px, 0);
+    }
+    50%{
+        transform: translate3d(0, 0, 0);
+    }
+    100%{
+        transform: translate3d(0, 65px, 0);
+    }
   }
 
     @media (min-width: 650px){
