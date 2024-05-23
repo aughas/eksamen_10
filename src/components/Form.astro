@@ -1,8 +1,8 @@
 <!--Göra till netlify?? -->
 <article>
     <form action="/action_page.php">
-        <input type="text" id="fname" name="fname" value="Fornavn"><br>
-        <input type="text" id="lname" name="lname" value="Efternavn"><br>
+        <input type="text" name="name" value="Navn"><br>
+        <input type="text" name="e-mail" value="E-mail"><br>
         <input type="submit" value="Send">
       </form> 
 </article>
@@ -14,20 +14,38 @@
     align-items: center;
     padding: 20px;
 }
-   input{
+input[type=text]{
   width: 243px;
   height: 43px;
   color: rgb(106, 103, 103);
   background-color: var(--lysgrå_col);
   border: none;
-  border-radius: 2px;
-} 
-input[type=text]{
-padding-left: 10px;
+  border-radius: 1.5px;
+  font-size: 15px;
+  padding-left: 10px;
 }
 input[type=submit] {
-    width: 105px;
+  width: 116px;
+    height: 36px;
     color: var(--background_col);
     cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
 }
+@media (min-width: 650px){
+
+input[type=text]{
+  width: 510px;
+  height: 78px;
+  font-size: 30px;
+  padding-left: 10px;
+}
+input[type=submit] {
+    width: 258px;
+    height: 81px;
+    color: var(--background_col);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+}}
 </style>
