@@ -1,0 +1,55 @@
+<div class="header">
+<div class="nav">
+    <a href="#omos">Om HoldiHånd</a>
+    <a href="#kunstnere">Kunstnere</a>
+    <a href="#kalender">Kalender</a>
+</div>
+
+<div class="ikoner">
+    <img id="ig" src="/img/ig.svg" alt="instagram">
+    <img id="fb" src="/img/fb.svg" alt="facebook">
+    <img id="sp" src="/img/spotify.svg" alt="spotify">
+    <img id="yt" src="/img/yt.svg" alt="youtube">
+</div>
+</div>
+<style>
+    .nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    }
+    .ikoner{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#ig:hover{
+    content: url("/img/ig_hov.svg");
+}
+#fb:hover{
+    content: url("/img/fb_hov.svg");
+}
+#sp:hover{
+    content: url("/img/spotify_hov.svg");
+}
+#yt:hover{
+    content: url("/img/yt_hov.svg");
+}
+
+img{
+    padding: 2px;
+height: 40px;
+
+}
+@media (min-width: 1000px){
+    img{
+    padding: 5px;
+}
+
+}
+</style>

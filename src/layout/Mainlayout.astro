@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.astro"
+import Header from "../components/Header.astro"
 ---
 
 <html lang="da">
@@ -13,9 +14,18 @@ import Footer from "../components/Footer.astro"
 		<title>Hold i Hånd</title>
 	</head>
 	<body>
+		<header><Header></Header></header>
 <main>
     <slot/>
 </main>
 <Footer />
 	</body>
 </html>
+
+<style>
+header{
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+</style>
