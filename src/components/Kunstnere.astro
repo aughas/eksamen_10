@@ -1,0 +1,158 @@
+---
+
+---
+
+<section aria-label="Spine images">
+    <div class="slider-container">
+        <div class="slider" data-slider>
+            <div class="slider-button prev" data-slider-button="prev"></div>
+            <ul data-slides>
+            </ul>
+            <div class="slider-button next" data-slider-button="next"></div>
+        </div>
+
+    </div>
+
+</section>
+<section class="single hide">
+    <h1 class="singleclose">Close</h1>
+    <img class="product-image" src="" alt="Product Image">
+    <h1 class="name"></h1>
+    <p class="about"></p>
+    <a class="insta" href="">INSTA</a>
+    <a class="spotify" href="">SPOTIFY</a>
+
+</section>
+
+
+<style>
+    /* Slider */
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slider {
+  width: 231px;
+  height: 223px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slider > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 500ms opacity ease-in-out, transform 500ms ease-in-out;
+  transition-delay: 300ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+  transform: scale(1) translateX(0);
+}
+
+.slide[data-previous] {
+  opacity: 0.5;
+  z-index: 0;
+  transform: scale(0.8) translateX(-50%);
+}
+
+.slide[data-next] {
+  opacity: 0.5;
+  z-index: 0;
+  transform: scale(0.8) translateX(50%);
+}
+
+.slider-button {
+  z-index: 5;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.slider-button.prev {
+  height: 27px;
+  width: 27px;
+  background-image: url("Vector.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: -80px;
+}
+
+.slider-button.next {
+  height: 27px;
+  width: 27px;
+  background-image: url("Vector-1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 80px;
+}
+
+@media (min-width: 650px) {
+  .slider {
+    width: 609px;
+    height: 675px;
+  }
+
+  .slider-button.next,
+  .slider-button.prev {
+    height: 70px;
+    width: 70px;
+  }
+  .slider-button.next {
+    left: 150px;
+  }
+  .slider-button.prev {
+    left: -150px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.op {
+  opacity: 30%;
+}
+
+.single {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: rgb(119, 119, 119); /* Set black background color */
+  z-index: 2; /* Ensure it's on top of the image carousel */
+}
+
+.singleclose {
+  position: absolute;
+  right: 0;
+}
+
+.single img {
+  width: 40%;
+  height: 60%;
+}
+</style>
