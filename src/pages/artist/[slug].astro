@@ -23,42 +23,55 @@ const { myData } = Astro.props;
 ---
 
 <MainLayout title={ myData.name }>
-    <dev class="grid">
-        <dev class="singleHero">
+    <div class="grid">
+        <div class="singleHero">
         <img src = `https://udntugbxmijixyecsglu.supabase.co/storage/v1/object/public/hero_imgs/${myData.image}`;>
         <h2 class="artistName">{myData.name}</h2>
-        </dev>
+        </div>
     <p class="desc">{myData.about}</p>
-    <dl class="info">
-        <dt>EXPLORE ON</dt>
-        <dd><a href={myData.spotify}>Spotify</a></dd>
-        <dd><a href={myData.insta}>instagram</a></dd>
-    </dl>
-    </dev>
+    <div class="info">
+        <p>EXPLORE ON</p>
+        <a href={myData.spotify}>
+            <img id="sp" src="/img/spotify.svg" alt="spotify">
+        </a>
+        <a href={myData.insta}>
+            <img id="yt" src="/img/yt.svg" alt="youtube">
+        </a>
+    </div>
     </MainLayout>
 
     <style>
-        h1{
-            color: transparent;
-            font-size: 5.4rem;
-            -webkit-text-stroke-color: var(--font_col);
-            -webkit-text-stroke-width: 0.1px;
+
+.singleHero{
+            width: 100%;
+            height: 200px;
         }
-        p{
-            font-family: "Alfa Slab One", serif;
-            color: white;
+        .singleHero img{
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
         }
-        dt{
-            font-family: "Alfa Slab One", serif;
-            color: white;
+        .artistName{
+            position: absolute;
+            top: 11.6rem;
+            mix-blend-mode: exclusion;
+        font-style: italic;
         }
-        dl{
-           font-family: "Alice";
-           color: white;
-           font-size: 20px;
+        .info{
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            /* display: flex; */
         }
-    
-        
+        .desc{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin: 50px 50px 30px 50px;
+        }
+@media (min-width: 650px){
         .singleHero{
             grid-column: 1/3;
             grid-row: 1/2;
@@ -71,7 +84,6 @@ const { myData } = Astro.props;
         .singleHero img{
          width: 924px;
          height: 400px;
-         object-fit: cover;
         }
         .list{
             grid-column: 1/2;
@@ -81,20 +93,17 @@ const { myData } = Astro.props;
         .info{
             grid-column: 2/3;
             grid-row: 2/3;
+            margin-left: 200px;
+            text-align: end;
         }
         .desc{
             margin-top: 30px;
+            margin-left: 100px;
+            text-align: left;
         }
     
-        .artistName{
-        mix-blend-mode: exclusion;
-        font-family: "Alfa Slab One", serif;
-            color: white;
-            font-size: 60px;
-        }
-    
- 
-     @media (min-width: 924px){
+
+
         .grid{
             margin-left: auto;
             margin-right: auto;
@@ -102,42 +111,13 @@ const { myData } = Astro.props;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
         }
+
         .artistName{
             padding: 0.2rem;
         padding-right: 2rem;
         position: absolute;
         top: 22.5rem;
-        }
-        .desc{
-            margin-left: 100px;
-    
-        }
-        .info{
-        margin-left: 200px;
-        }
-     }
-    @media (max-width: 924px){
-        .singleHero{
-            width: 100%;
-            height: 200px;
-        }
-        .singleHero img{
-         width: 100%;
-         height: 200px;
-        }
-        .artistName{
-            position: absolute;
-            top: 10.5rem;
-        }
-        .info{
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-        .desc{
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
+
         }
     }
     </style>
