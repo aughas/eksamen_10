@@ -30,7 +30,7 @@ const { myData } = Astro.props;
         </dev>
     <p class="desc">{myData.about}</p>
     <dl class="info">
-        <dt>Explore the artist</dt>
+        <dt>EXPLORE ON</dt>
         <dd><a href={myData.spotify}>Spotify</a></dd>
         <dd><a href={myData.insta}>instagram</a></dd>
     </dl>
@@ -73,17 +73,17 @@ const { myData } = Astro.props;
          height: 400px;
          object-fit: cover;
         }
-        .info{
+        .list{
             grid-column: 1/2;
             grid-row: 2/3;
             margin-top: 80px;
         }
-        .list{
+        .info{
             grid-column: 2/3;
             grid-row: 2/3;
         }
         .desc{
-            margin-top: 80px;
+            margin-top: 30px;
         }
     
         .artistName{
@@ -106,11 +106,10 @@ const { myData } = Astro.props;
             padding: 0.2rem;
         padding-right: 2rem;
         position: absolute;
-        right: 0.5rem;
         top: 22.5rem;
         }
         .desc{
-            margin-right: 100px;
+            margin-left: 100px;
     
         }
         .info{

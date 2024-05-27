@@ -6,9 +6,9 @@ import Card from "../components/Card.astro";
 
 <a href={`artist/${data.slug}`}>
 <article>
-    <Card>
+    <Card header={data.name} text={data.country}>
     <img src=`https://udntugbxmijixyecsglu.supabase.co/storage/v1/object/public/hero_imgs/${data.image}` alt="">
-    <h1>{data.name}</h1>
+    <!-- <h1>{data.name}</h1> -->
 </Card>
 </article>
 </a>
