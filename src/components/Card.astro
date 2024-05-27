@@ -1,0 +1,61 @@
+---
+const header = Astro.props.header;
+const text = Astro.props.text;
+---
+
+<article class="card">
+    <slot class="img" />
+    <div class="name">
+     <h3>{header}<span>{text}</span></h3>
+   </div>
+</article>
+
+<style>
+    h3{
+        color: var(--font_col);
+    }
+.card{
+    width: 300px;
+    height: 220px;
+    position: relative;
+}
+
+@media (max-width: 600px){
+    .card{
+    width: 150px;
+    height: 110px;
+    position: relative;
+}
+
+
+.card .name h3,
+.card .name span {
+    font-size: 10px;
+}
+}
+.img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+span{
+    position: absolute;
+    top: 0;
+    font-size: 0.6em;
+}
+.name{
+    padding: 0.2rem;
+    padding-right: 2rem;
+    position: absolute;
+    left: 0.5rem;
+    bottom: 1rem;
+    background-color: var(--background_col); 
+    opacity: 50%;
+}
+</style>
+

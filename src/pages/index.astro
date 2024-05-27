@@ -9,7 +9,15 @@ import Form from "../components/Form.astro"
 import Hero from "../components/Hero.astro"
 import Knap from "../components/Knap.astro"
 import Logo from "../components/Logo.astro"
-import Kunstnere from "../components/Kunstnere.astro"
+import List from "../components/List.astro"
+
+const data = await fetch("https://udntugbxmijixyecsglu.supabase.co/rest/v1/eksamen_10?order=order.asc",{
+	method:"GET",
+	headers: {
+		apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkbnR1Z2J4bWlqaXh5ZWNzZ2x1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ3Mzk5MTcsImV4cCI6MjAzMDMxNTkxN30.F2LbcCGrABehU4gaujhAuDCpNl9dgBtoTZezpERrH8A"
+	}
+}).then(res=>res.json());
+
 ---
 
 <Mainlayout>
@@ -23,7 +31,13 @@ import Kunstnere from "../components/Kunstnere.astro"
 <Omos />
 <div id="kunstnere"></div>
 <Banner text = "KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;KUNSTNERE&nbsp;&nbsp;&nbsp;"/>
-<Kunstnere></Kunstnere>
+<!-- <Kunstnere></Kunstnere> -->
+<section class="artists">
+    {
+    data.map((artist) => {
+        return <List data={artist} />;
+    })}
+</section>
 <div id="events"></div>
  <Banner text = "EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;EVENT KALENDER&nbsp;&nbsp;&nbsp;"/>
 <article class="kalender">
@@ -85,5 +99,39 @@ import Kunstnere from "../components/Kunstnere.astro"
 }
 }
 
+
+/* listview */
+@media (min-width: 900px){
+		.margin{
+		margin-left: auto;
+		margin-right: auto;
+		width: 900px;
+	}
+
+	.artists{
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	}
+  }
+
+  @media (max-width: 900px){
+	.margin{
+		margin-left: auto;
+		margin-right: auto;
+		width: 600px;
+	}
+	.artists{
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  }
+
+  @media (max-width: 600px){
+	.margin{
+		margin-left: auto;
+		margin-right: auto;
+		width: 300px;
+	}
+  }
 
 </style>
