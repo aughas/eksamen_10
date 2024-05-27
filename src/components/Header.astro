@@ -14,21 +14,32 @@
 </div>
 <style>
     .nav{
-    display: flex;
+   display: flex;
     flex-direction: column;
-    justify-content: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
     }
 
-    .ikoner{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-}
 .header{
     display: flex;
     justify-content: space-between;
 }
+.ikoner{
+    display: none;
+}
+@media (min-width: 500px){
+    img{
+    padding: 5px;
+}
 
+    .ikoner{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
 #ig:hover{
     content: url("/img/ig_hov.svg");
 }
@@ -47,10 +58,6 @@ img{
 height: 40px;
 
 }
-@media (min-width: 1000px){
-    img{
-    padding: 5px;
 }
 
-}
 </style>
