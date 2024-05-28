@@ -6,6 +6,7 @@ import Banner from "../components/Banner.astro"
 import Logo from "../components/Logo.astro"
 ---
 <Mainlayout>
+    <header><Header link1="index.html" link2="#omos" link3="#kunstnere" link4="#kalender" ikon1="img/ig.svg" ikon2="img/fb.svg" ikon3="img/spotify.svg" ikon4="img/yt.svg"/></header>
         <Banner text = "NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;"/>
       <section>
     <img src="/public/img/kunstnere.webp" alt="">
@@ -26,6 +27,8 @@ import Logo from "../components/Logo.astro"
                 <div class="text"><input type="text" name="name" value="Navn"><br>
                 <input type="text" name="e-mail" value="E-mail"><br>
                 </div>
+                <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+                <br><br>
                 <input type="submit" value="Send">
               </form> 
         </article>
