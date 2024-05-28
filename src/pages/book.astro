@@ -2,11 +2,189 @@
 import Mainlayout from "../layout/Mainlayout.astro"
 import "../styles/style.css"
 import Banner from "../components/Banner.astro"
+import Logo from "../components/Logo.astro"
 ---
 <Mainlayout>
+    <div class="header">
+    
+        <div class="dropdown">
+        <button class="dropbtn">MENU</button>
+    <div class="nav">
+        <a href="index.html#omos">Om HoldiHånd</a>
+        <a href="index.html#kunstnere">Kunstnere</a>
+        <a href="index.html#kalender">Kalender</a>
+    </div>
+    </div>
+    
+    <div class="ikoner">
+        <img id="ig" src="/img/ig.svg" alt="instagram">
+        <img id="fb" src="/img/fb.svg" alt="facebook">
+        <img id="sp" src="/img/spotify.svg" alt="spotify">
+        <img id="yt" src="/img/yt.svg" alt="youtube">
+    </div>
+    </div>
 
 </Mainlayout>
+<footer>
+    <Logo></Logo>
+    <div class="footer_nav">
+        <p class="p_footer">HoldiHånd Management</p>
+        <p class="p_footer">+45 93869610</p>
+        <p class="p_footer">kontakt@holdihaand.dk</p>
+        <div class="ikoner_nav">
+           <img class="img_nav" id="ig" src="/img/ig.svg" alt="instagram">
+            <img class="img_nav" id="fb" src="/img/fb.svg" alt="facebook">
+            <img class="img_nav" id="sp" src="/img/spotify.svg" alt="spotify">
+            <img class="img_nav" id="yt" src="/img/yt.svg" alt="youtube">
+        </div>
+    </div>
+</footer>
 
 <style>
+    /* footer */
+    .logga{
+        padding-bottom: 200px;
+    }
     
+    .ikoner_nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    footer{
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 47px;
+    }
+    
+    .p_footer{
+        margin-bottom: 12px;
+    }
+    .img_nav{
+        padding: 5px;
+    }
+    
+    
+    
+            /* header */
+            .dropbtn {
+      background-color: rgba(255, 255, 255, 0.7);
+      color: #00415D;
+      border: none;
+      font-size: 30px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      top: 0px;
+      right: 0px;
+      padding: 10px;
+      border-radius: 10px;
+      font-family: "Kantumruy Pro", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      color: var(--font_col);
+    }
+    
+    .dropdown {
+      place-content: end end;
+      padding: 5px;
+      position: fixed;
+      display: inline-block;
+      top: 20px;
+      left: 20px;
+      z-index: 7;
+    }
+    
+    .nav {
+      display: none;
+      position: fixed;
+      top: 80px;
+      background-color: rgba(255, 255, 255, 0.7);
+      opacity: 90%;
+      border-radius: 10px;
+      font-family: "Kantumruy Pro", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      color: var(--font_col);
+    }
+    
+    .nav a {
+      color: #00415D;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 20px;
+    }
+    
+    .nav a:hover {
+      background-color: var(--hover_col;)
+    }
+    
+    .dropdown:hover .nav {
+      display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+      color: var(--hover_col);
+    }
+    
+    
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .ikoner{
+        display: none;
+        z-index: 11;
+    }
+    @media (min-width: 500px){
+    img{
+    padding: 5px;
+}
+
+    .ikoner{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#ig:hover{
+    content: url("/img/ig_hov.svg");
+}
+#fb:hover{
+    content: url("/img/fb_hov.svg");
+}
+#sp:hover{
+    content: url("/img/spotify_hov.svg");
+}
+#yt:hover{
+    content: url("/img/yt_hov.svg");
+}
+
+img{
+    padding: 3.5px;
+height: 40px;
+}
+}
+
+@media (min-width: 1050px){
+    footer{
+        margin-left: 30px;
+        margin-right: 60px;
+    }
+
+.footer_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ikoner_nav img{
+    width: 40%;
+}
+
+}
+
+
 </style>
