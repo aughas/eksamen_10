@@ -30,13 +30,16 @@ const { myData } = Astro.props;
         </div>
     <p class="desc">{myData.about}</p>
     <div class="info">
+       
         <p>EXPLORE ON</p>
+        <div class="links">
         <a href={myData.spotify}>
             <img id="sp" src="../../img/spotify.svg" alt="spotify">
         </a>
         <a href={myData.insta}>
-            <img id="yt" src="../../img/yt.svg" alt="youtube">
+            <img id="ig" src="../../img/ig.svg" alt="youtube">
         </a>
+        </div>
     </div>
     </MainLayout>
 
@@ -63,19 +66,28 @@ const { myData } = Astro.props;
             align-items: center;
             text-align: center;
             font-weight: bold;
-            /* display: flex; */
         }
+
+
         .desc{
             margin-left: auto;
             margin-right: auto;
             text-align: center;
             margin: 50px 50px 30px 50px;
         }
+        .links{
+            display: flex;
+            align-items: center;
+            margin-left: 45%;
+        }
+        .grid{
+            margin-bottom: 100px;
+        }
 @media (min-width: 650px){
         .singleHero{
             grid-column: 1/3;
             grid-row: 1/2;
-            width: 924px;
+            max-width: 924px;
             height: 400px;
             margin-left: auto;
             margin-right: auto;
@@ -96,14 +108,16 @@ const { myData } = Astro.props;
             margin-left: 200px;
             text-align: end;
         }
+
+        .links img{
+            width: 83px;
+        }
         .desc{
             margin-top: 30px;
             margin-left: 100px;
             text-align: left;
         }
     
-
-
         .grid{
             margin-left: auto;
             margin-right: auto;
@@ -119,5 +133,12 @@ const { myData } = Astro.props;
         top: 22.5rem;
 
         }
+
+        #sp:hover{
+    content: url("/img/spotify_hov.svg");
+}
+#ig:hover{
+    content: url("/img/ig_hov.svg");
+}
     }
     </style>
