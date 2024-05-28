@@ -83,6 +83,10 @@ const data = await fetch("https://udntugbxmijixyecsglu.supabase.co/rest/v1/eksam
             to{scale: 1; opacity: 1;}
         }
         
+        .artists{
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	}
 
 @media (min-width: 650px) {
     .kalender{
@@ -101,10 +105,5 @@ const data = await fetch("https://udntugbxmijixyecsglu.supabase.co/rest/v1/eksam
   padding: 0 50px 30px 50px;
 }
 }
-.artists{
-	  display: grid;
-	  grid-template-columns: repeat(3, 1fr);
-	}
-
 
 </style>

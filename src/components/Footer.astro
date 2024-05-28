@@ -27,22 +27,6 @@ import Logo from "./Logo.astro"
     flex-direction: row;
     justify-content: center;
 }
-@media (min-width: 1000px){
-    footer{
-        margin-left: 30px;
-        margin-right: 60px;
-    }
-.nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.ikoner img{
-    width: 40%;
-}
-
-}
-/* mobil styles:*/
 footer{
     font-weight: bold;
     text-align: center;
@@ -68,4 +52,20 @@ img{
 #yt:hover{
     content: url("/img/yt_hov.svg");
 }
+@media (min-width: 1050px){
+    footer{
+        margin-left: 30px;
+        margin-right: 60px;
+    }
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ikoner img{
+    width: 40%;
+}
+
+}
+
 </style>
