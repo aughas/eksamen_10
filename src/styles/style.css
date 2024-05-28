@@ -29,7 +29,8 @@ p,
 a,
 dt,
 input[type="text"],
-input[type="submit"] {
+input[type="submit"],
+.checkbox {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
