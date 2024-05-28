@@ -29,9 +29,9 @@ const { myData } = Astro.props;
         <div class="dropdown">
         <button class="dropbtn">MENU</button>
     <div class="nav">
-        <a href="#omos">Om HoldiHånd</a>
-        <a href="#kunstnere">Kunstnere</a>
-        <a href="#kalender">Kalender</a>
+        <a href="index.html#omos">Om HoldiHånd</a>
+        <a href="index.html#kunstnere">Kunstnere</a>
+        <a href="index.html#kalender">Kalender</a>
     </div>
     </div>
     
@@ -61,6 +61,7 @@ const { myData } = Astro.props;
         </a>
         </div>
     </div>
+    </MainLayout>
     <footer>
         <Logo></Logo>
         <div class="footer_nav">
@@ -75,7 +76,6 @@ const { myData } = Astro.props;
             </div>
         </div>
     </footer>
-    </MainLayout>
 
     <style>
 /* footer */
@@ -311,14 +311,14 @@ height: 40px;
     }
 
     /* vrf fuckar .footer_navs scope css med andra grejer?? */
-/* .footer_nav{
+.footer_nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-} */
-/* .ikoner_nav img{
+}
+.ikoner_nav img{
     width: 40%;
-} */
+}
 
 }
 
