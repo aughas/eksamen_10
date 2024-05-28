@@ -61,9 +61,48 @@ const { myData } = Astro.props;
         </a>
         </div>
     </div>
+    <footer>
+        <Logo></Logo>
+        <div class="footer_nav">
+            <p class="p_footer">HoldiHånd Management</p>
+            <p class="p_footer">+45 93869610</p>
+            <p class="p_footer">kontakt@holdihaand.dk</p>
+            <div class="ikoner_nav">
+               <img class="img_nav" id="ig" src="/img/ig.svg" alt="instagram">
+                <img class="img_nav" id="fb" src="/img/fb.svg" alt="facebook">
+                <img class="img_nav" id="sp" src="/img/spotify.svg" alt="spotify">
+                <img class="img_nav" id="yt" src="/img/yt.svg" alt="youtube">
+            </div>
+        </div>
+    </footer>
     </MainLayout>
 
     <style>
+/* footer */
+.logga{
+    padding-bottom: 200px;
+}
+
+.ikoner_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+footer{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 47px;
+}
+
+.p_footer{
+    margin-bottom: 12px;
+}
+.img_nav{
+    padding: 5px;
+}
+
+
+
         /* header */
         .dropbtn {
   background-color: rgba(255, 255, 255, 0.7);
@@ -264,6 +303,25 @@ img{
 height: 40px;
 }
 }
+
+@media (min-width: 1050px){
+    footer{
+        margin-left: 30px;
+        margin-right: 60px;
+    }
+
+    /* vrf fuckar .footer_navs scope css med andra grejer?? */
+/* .footer_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+/* .ikoner_nav img{
+    width: 40%;
+} */
+
+}
+
 
 
 
