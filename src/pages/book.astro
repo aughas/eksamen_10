@@ -4,10 +4,10 @@ import Header from "../components/Header.astro"
 import "../styles/style.css"
 import Banner from "../components/Banner.astro"
 import Logo from "../components/Logo.astro"
+import Footer from "../components/Footer.astro"
 ---
 <Mainlayout>
     <header><Header link1="index.html" link2="#omos" link3="#kunstnere" link4="#kalender" ikon1="img/ig.svg" ikon2="img/fb.svg" ikon3="img/spotify.svg" ikon4="img/yt.svg"/></header>
-        <Banner text = "NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;"/>
       <section>
     <img src="/public/img/kunstnere.webp" alt="">
     <img src="/public/img/kunstnere.webp" alt="">
@@ -18,11 +18,13 @@ import Logo from "../components/Logo.astro"
     <h4>Maja Tolstrup</h4>
     <h4>August Tolstrup</h4>
     </section>
-    <div class="text">
+    <Banner text = "MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;MANAGEMENTET&nbsp;&nbsp;&nbsp;"/>
+    <div class="managementet">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae commodi quis eaque amet nisi, ex saepe quibusdam quidem. A, tenetur ad quod aperiam impedit quae deleniti id maxime voluptatem voluptates?</p>
     </div>
-        <Banner text = "NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;NYHEDSBREV&nbsp;&nbsp;&nbsp;"/>
-        <article>
+        <Banner text = "BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;"/>
+        <p class="besked">Send et besked for at book et møde.</p>
+        <article class="webf">
             <form action="/action_page.php">
                 <div class="text"><input type="text" name="name" value="Navn"><br>
                 <input type="text" name="e-mail" value="E-mail"><br>
@@ -34,7 +36,8 @@ import Logo from "../components/Logo.astro"
         </article>
  
 </Mainlayout>
-<footer>
+<Footer/>
+<!--<footer>
     <Logo></Logo>
     <div class="footer_nav">
         <p class="p_footer">HoldiHånd Management</p>
@@ -47,10 +50,29 @@ import Logo from "../components/Logo.astro"
             <img class="img_nav" id="yt" src="/img/yt.svg" alt="youtube">
         </div>
     </div>
-</footer>
-
+</footer> -->
    
 <style>
+  .besked{
+    text-align: center;
+  }
+  .webf{
+            scale: .8; opacity: 0;
+            animation: fade-in linear forwards;
+            animation-timeline: view();
+            animation-range: 100px 300px;
+        }
+        @keyframes fade-in {
+            to{scale: 1; opacity: 1;}
+        }
+    textarea{
+        width: 260px;
+        height: 140px;
+        color: rgb(106, 103, 103);
+        padding: 5px;
+        font-size: 15px;
+        background-color: var(--lysgrå_col);
+    }
     section {
     display: grid;
 grid-template-columns: 1fr 1fr 1fr;
@@ -91,7 +113,18 @@ input[type=submit] {
 .checkbox{
 padding-bottom: 20px;
 }
+h4{
+  font-size: 14px;
+}
+.managementet{
+  margin: 10px;
+  padding: 20px;
+  background-color: #21314A;
+}
 @media (min-width: 650px){
+h4{
+  font-size: 18px;
+}
 
 input[type=text]{
   width: 350px;
@@ -113,13 +146,32 @@ input[type=submit]:hover{
       height: 79px;
       font-size: 29px;
     }
+    textarea{
+        width: 444px;
+        height: 144px;
+        padding: 5px;
+        font-size: 27px;
+        margin-top: 10px;
+    }
 }
 @media (min-width: 820px){
+  h4{
+    font-size: 25px;
+  }
   .text{
   display: flex;
   flex-direction: row;
   gap: 30px;
   padding: 30px 0 50px 0;
+}
+textarea{
+    width: 644px;
+    height: 144px;
+}
+.managementet{
+  margin: 10px 300px 10px 300px;
+  padding: 50px;
+  background-color: #21314A;
 }
  }
 </style>

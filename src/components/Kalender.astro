@@ -7,7 +7,7 @@ const text2 = Astro.props.text2;
 
 <article>
 <h4>{header}</h4>
-<p class="bold">{header2}</p>
+<a class="bold" href="https://www.cphdistortion.dk/">{header2}</a>
 <p>{text}</p>
 <p>{text2}</p>
 </article>
@@ -19,6 +19,8 @@ const text2 = Astro.props.text2;
     .bold{
     font-weight: bold;
     color: var(--grå_col);
+    text-decoration: none;
+    font-size: 18px;
     }
     p{
         padding-top: 4px;
@@ -27,5 +29,9 @@ const text2 = Astro.props.text2;
     @media (min-width: 650px){
     p{
         padding-top: 10px;
-    }}
+    }
+    .bold{
+    font-size: 27px;
+}
+    }
 </style>
