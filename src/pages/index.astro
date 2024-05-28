@@ -10,6 +10,8 @@ import Hero from "../components/Hero.astro"
 import Knap from "../components/Knap.astro"
 import Logo from "../components/Logo.astro"
 import List from "../components/List.astro"
+import Footer from "../components/Footer.astro"
+import Header from "../components/Header.astro"
 
 const data = await fetch("https://udntugbxmijixyecsglu.supabase.co/rest/v1/eksamen_10?order=order.asc",{
 	method:"GET",
@@ -21,6 +23,7 @@ const data = await fetch("https://udntugbxmijixyecsglu.supabase.co/rest/v1/eksam
 ---
 
 <Mainlayout>
+    <header><Header></Header></header>
     <Hero></Hero>
     <div class="webf">
     <Nav></Nav>
@@ -58,6 +61,7 @@ const data = await fetch("https://udntugbxmijixyecsglu.supabase.co/rest/v1/eksam
 <p class="tilmeld">Tilmeld dig vores nyhedsbrev.</p>
 <Form />
 </article></div>
+<Footer />
 </Mainlayout>
 
 <style>
