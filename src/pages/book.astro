@@ -6,7 +6,6 @@ import Banner from "../components/Banner.astro"
 import Logo from "../components/Logo.astro"
 ---
 <Mainlayout>
-    <Header link1="index.html" link2="#omos" link3="#kunstnere" link4="#kalender" ikon1="img/ig.svg" ikon2="img/fb.svg" ikon3="img/spotify.svg" ikon4="img/yt.svg"/>
 
 </Mainlayout>
 <footer>
@@ -25,85 +24,5 @@ import Logo from "../components/Logo.astro"
 </footer>
 
 <style>
-    /* footer */
-    .logga{
-        padding-bottom: 200px;
-    }
     
-    .ikoner_nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    footer{
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 47px;
-    }
-    
-    .p_footer{
-        margin-bottom: 12px;
-    }
-    .img_nav{
-        padding: 5px;
-    }
-    
-    
-    .header{
-        display: flex;
-        justify-content: space-between;
-    }
-    .ikoner{
-        display: none;
-        z-index: 11;
-    }
-    @media (min-width: 500px){
-    img{
-    padding: 5px;
-}
-
-    .ikoner{
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
-#ig:hover{
-    content: url("/img/ig_hov.svg");
-}
-#fb:hover{
-    content: url("/img/fb_hov.svg");
-}
-#sp:hover{
-    content: url("/img/spotify_hov.svg");
-}
-#yt:hover{
-    content: url("/img/yt_hov.svg");
-}
-
-img{
-    padding: 3.5px;
-height: 40px;
-}
-}
-
-@media (min-width: 1050px){
-    footer{
-        margin-left: 30px;
-        margin-right: 60px;
-    }
-
-.footer_nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.ikoner_nav img{
-    width: 40%;
-}
-
-}
-
-
 </style>
