@@ -1,4 +1,5 @@
 ---
+import Logo from "../../components/Logo.astro"
 import "../../styles/style.css"
 import MainLayout from "../../layout/Mainlayout.astro"
 export async function getStaticPaths() {
@@ -23,6 +24,25 @@ const { myData } = Astro.props;
 ---
 
 <MainLayout title={ myData.name }>
+    <div class="header">
+    
+        <div class="dropdown">
+        <button class="dropbtn">MENU</button>
+    <div class="nav">
+        <a href="#omos">Om HoldiHånd</a>
+        <a href="#kunstnere">Kunstnere</a>
+        <a href="#kalender">Kalender</a>
+    </div>
+    </div>
+    
+    <div class="ikoner">
+        <img id="ig" src="/img/ig.svg" alt="instagram">
+        <img id="fb" src="/img/fb.svg" alt="facebook">
+        <img id="sp" src="/img/spotify.svg" alt="spotify">
+        <img id="yt" src="/img/yt.svg" alt="youtube">
+    </div>
+    </div>
+    
     <div class="grid">
         <div class="singleHero">
         <img src = `https://udntugbxmijixyecsglu.supabase.co/storage/v1/object/public/hero_imgs/${myData.image}`;>
@@ -44,6 +64,79 @@ const { myData } = Astro.props;
     </MainLayout>
 
     <style>
+        /* header */
+        .dropbtn {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #00415D;
+  border: none;
+  font-size: 30px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--font_col);
+}
+
+.dropdown {
+  place-content: end end;
+  padding: 5px;
+  position: fixed;
+  display: inline-block;
+  top: 20px;
+  left: 20px;
+  z-index: 7;
+}
+
+.nav {
+  display: none;
+  position: fixed;
+  top: 80px;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 90%;
+  border-radius: 10px;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--font_col);
+}
+
+.nav a {
+  color: #00415D;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+}
+
+.nav a:hover {
+  background-color: var(--hover_col;)
+}
+
+.dropdown:hover .nav {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: var(--hover_col);
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.ikoner{
+    display: none;
+    z-index: 11;
+}
+
 
 .singleHero{
             width: 100%;
@@ -141,4 +234,37 @@ const { myData } = Astro.props;
     content: url("/img/ig_hov.svg");
 }
     }
+    @media (min-width: 500px){
+    img{
+    padding: 5px;
+}
+
+    .ikoner{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#ig:hover{
+    content: url("/img/ig_hov.svg");
+}
+#fb:hover{
+    content: url("/img/fb_hov.svg");
+}
+#sp:hover{
+    content: url("/img/spotify_hov.svg");
+}
+#yt:hover{
+    content: url("/img/yt_hov.svg");
+}
+
+img{
+    padding: 3.5px;
+height: 40px;
+}
+}
+
+
+
     </style>

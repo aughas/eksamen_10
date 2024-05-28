@@ -4,11 +4,11 @@ import Logo from "./Logo.astro"
 
 <footer>
     <Logo></Logo>
-    <div class="nav">
+    <div class="footer_nav">
         <p>HoldiHånd Management</p>
         <p>+45 93869610</p>
         <p>kontakt@holdihaand.dk</p>
-        <div class="ikoner">
+        <div class="ikoner_nav">
            <img id="ig" src="img/ig.svg" alt="instagram">
             <img id="fb" src="img/fb.svg" alt="facebook">
             <img id="sp" src="img/spotify.svg" alt="spotify">
@@ -22,7 +22,7 @@ import Logo from "./Logo.astro"
     padding-bottom: 200px;
 }
 
-.ikoner{
+.ikoner_nav{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -39,7 +39,7 @@ p{
 img{
     padding: 5px;
 }
-/*ikoner byter färg */
+/*ikoner_nav byter färg */
 #ig:hover{
     content: url("/img/ig_hov.svg");
 }
@@ -57,12 +57,12 @@ img{
         margin-left: 30px;
         margin-right: 60px;
     }
-.nav{
+.footer_nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.ikoner img{
+.ikoner_nav img{
     width: 40%;
 }
 
