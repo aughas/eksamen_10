@@ -1,39 +1,61 @@
+---
+const {link1} = Astro.props
+const {link2} = Astro.props
+const {link3} = Astro.props
+const {link4} = Astro.props
+const {ikon1} = Astro.props
+const {ikon2} = Astro.props
+const {ikon3} = Astro.props
+const {ikon4} = Astro.props
+---
+
 <div class="header">
     
     <div class="dropdown">
     <button class="dropbtn">MENU</button>
-<div class="nav">
+    <div class="nav">
+        <a href={link1}>Home</a>
+        <a href={link2}>Om HoldiHånd</a>
+        <a href={link3}>Kunstnere</a>
+        <a href={link4}>Kalender</a>
+    </div>
+<!-- <div class="nav">
+  <a href="index.html">Home</a>
     <a href="#omos">Om HoldiHånd</a>
     <a href="#kunstnere">Kunstnere</a>
     <a href="#kalender">Kalender</a>
-</div>
+</div> -->
 </div>
 
 <div class="ikoner">
-    <img id="ig" src="img/ig.svg" alt="instagram">
+  <img id="ig" src={ikon1} alt="instagram">
+  <img id="fb" src={ikon2} alt="facebook">
+  <img id="sp" src={ikon3} alt="spotify">
+  <img id="yt" src={ikon4} alt="youtube">
+    <!-- <img id="ig" src="img/ig.svg" alt="instagram">
     <img id="fb" src="img/fb.svg" alt="facebook">
     <img id="sp" src="img/spotify.svg" alt="spotify">
-    <img id="yt" src="img/yt.svg" alt="youtube">
+    <img id="yt" src="img/yt.svg" alt="youtube"> -->
 </div>
 </div>
 <style>
 
+button{
+  font-family: "Arimo", sans-serif;
+}
 .dropbtn {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #00415D;
+  background-color: var(--lysgrå_col);
+  color: black;
   border: none;
-  font-size: 30px;
   margin-right: 20px;
   margin-bottom: 20px;
   top: 0px;
   right: 0px;
   padding: 10px;
-  border-radius: 10px;
-  font-family: "Kantumruy Pro", sans-serif;
+  border-radius: 1.5px;
   font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--font_col);
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .dropdown {
@@ -41,35 +63,30 @@
   padding: 5px;
   position: fixed;
   display: inline-block;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 10px;
   z-index: 7;
 }
 
 .nav {
   display: none;
   position: fixed;
-  top: 80px;
-  background-color: rgba(255, 255, 255, 0.7);
-  opacity: 90%;
-  border-radius: 10px;
-  font-family: "Kantumruy Pro", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--font_col);
+  background-color: var(--lysgrå_col);
+  opacity: 100%;
+  border-radius: 1.5px;
+  top: 50px;
 }
 
 .nav a {
-  color: #00415D;
-  padding: 12px 16px;
+  color: var(--background_col);
+  padding: 4px 6px;
   text-decoration: none;
   display: block;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .nav a:hover {
-  background-color: var(--hover_col;)
+  background-color: var(--grå_col);
 }
 
 .dropdown:hover .nav {
@@ -77,7 +94,7 @@
 }
 
 .dropdown:hover .dropbtn {
-  color: var(--hover_col);
+  color: #21314A;
 }
 
 
@@ -117,6 +134,18 @@
 img{
     padding: 3.5px;
 height: 40px;
+}
+
+.dropbtn{
+  font-size: 25px;
+}
+.nav{
+  top: 64px;
+  padding: 12px 16px;
+  font-size: 20px;
+}
+.nav a{
+  padding: 12px 16px;
 }
 }
 

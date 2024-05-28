@@ -1,4 +1,5 @@
 ---
+import Header from "../../components/Header.astro"
 import Logo from "../../components/Logo.astro"
 import "../../styles/style.css"
 import MainLayout from "../../layout/Mainlayout.astro"
@@ -24,7 +25,7 @@ const { myData } = Astro.props;
 ---
 
 <MainLayout title={ myData.name }>
-    <div class="header">
+    <!-- <div class="header">
     
         <div class="dropdown">
         <button class="dropbtn">MENU</button>
@@ -41,7 +42,8 @@ const { myData } = Astro.props;
         <img id="sp" src="/img/spotify.svg" alt="spotify">
         <img id="yt" src="/img/yt.svg" alt="youtube">
     </div>
-    </div>
+    </div> -->
+    <Header link1="index.html" link2="index.html#omos" link3="index.html#kunstnere" link4="index.html#kalender"ikon1="../img/ig.svg" ikon2="../img/fb.svg" ikon3="../img/spotify.svg" ikon4="../img/yt.svg"/>
     
     <div class="grid">
         <div class="singleHero">
@@ -103,7 +105,7 @@ footer{
 
 
 
-        /* header */
+        /* header
         .dropbtn {
   background-color: rgba(255, 255, 255, 0.7);
   color: #00415D;
@@ -164,7 +166,7 @@ footer{
 
 .dropdown:hover .dropbtn {
   color: var(--hover_col);
-}
+} */
 
 
 .header{
@@ -321,8 +323,5 @@ height: 40px;
 }
 
 }
-
-
-
 
     </style>
