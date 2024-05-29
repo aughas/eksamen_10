@@ -7,11 +7,7 @@ import Footer from "../components/Footer.astro"
 ---
 <Mainlayout>
     <header><Header link1="/" link2="/#omos" link3="/#kunstnere" link4="/#kalender" ikon1="img/ig.svg" ikon2="img/fb.svg" ikon3="img/spotify.svg" ikon4="img/yt.svg"/></header>
-      <section>
-    <img src="/img/hihgang.webp" alt="">
-    <img src="/img/hihgang.webp" alt="">
-    <img src="/img/hihgang.webp" alt="">
-    </section>
+    <div class="gang"><img src="/img/hihgang.webp" alt="billede af managementet"></div>
     <section>
     <h4>niosha vandchali</h4>  
     <h4>Sigga slente</h4>
@@ -60,8 +56,10 @@ import Footer from "../components/Footer.astro"
         background-color: var(--lysgrå_col);
     }
     section {
-    display: grid;
-grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px 0 10px;
   }
   form {
     display: flex;
@@ -109,6 +107,13 @@ h4{
   background-color: #21314A;
 }
 @media (min-width: 650px){
+.gang{
+  display: flex;
+  justify-content: center;
+}
+.gang img{
+  width: 750px;
+}
 h4{
   font-size: 20px;
 }
