@@ -25,25 +25,7 @@ const { myData } = Astro.props;
 ---
 
 <MainLayout title={ myData.name }>
-    <!-- <div class="header">
-    
-        <div class="dropdown">
-        <button class="dropbtn">MENU</button>
-    <div class="nav">
-        <a href="index.html#omos">Om HoldiHånd</a>
-        <a href="index.html#kunstnere">Kunstnere</a>
-        <a href="index.html#kalender">Kalender</a>
-    </div>
-    </div>
-    
-    <div class="ikoner">
-        <img id="ig" src="/img/ig.svg" alt="instagram">
-        <img id="fb" src="/img/fb.svg" alt="facebook">
-        <img id="sp" src="/img/spotify.svg" alt="spotify">
-        <img id="yt" src="/img/yt.svg" alt="youtube">
-    </div>
-    </div> -->
-    <Header link1="index.html" link2="index.html#omos" link3="index.html#kunstnere" link4="index.html#kalender"ikon1="../img/ig.svg" ikon2="../img/fb.svg" ikon3="../img/spotify.svg" ikon4="../img/yt.svg"/>
+    <Header link1="/" link2="/#omos" link3="/#kunstnere" link4="/#kalender"ikon1="../img/ig.svg" ikon2="../img/fb.svg" ikon3="../img/spotify.svg" ikon4="../img/yt.svg"/>
     
     <div class="grid">
         <div class="singleHero">
@@ -103,80 +85,6 @@ footer{
     padding: 5px;
 }
 
-
-
-        /* header
-        .dropbtn {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #00415D;
-  border: none;
-  font-size: 30px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  top: 0px;
-  right: 0px;
-  padding: 10px;
-  border-radius: 10px;
-  font-family: "Kantumruy Pro", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--font_col);
-}
-
-.dropdown {
-  place-content: end end;
-  padding: 5px;
-  position: fixed;
-  display: inline-block;
-  top: 20px;
-  left: 20px;
-  z-index: 7;
-}
-
-.nav {
-  display: none;
-  position: fixed;
-  top: 80px;
-  background-color: rgba(255, 255, 255, 0.7);
-  opacity: 90%;
-  border-radius: 10px;
-  font-family: "Kantumruy Pro", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--font_col);
-}
-
-.nav a {
-  color: #00415D;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-size: 20px;
-}
-
-.nav a:hover {
-  background-color: var(--hover_col;)
-}
-
-.dropdown:hover .nav {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  color: var(--hover_col);
-} */
-
-
-.header{
-    display: flex;
-    justify-content: space-between;
-}
-.ikoner{
-    display: none;
-    z-index: 11;
-}
 
 
 .singleHero{
