@@ -85,9 +85,111 @@ footer{
     padding: 5px;
 }
 
+/* chats lösning */
+.grid {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.singleHero {
+    width: 100%;
+    /* max-width: 924px; */
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.singleHero{
+.singleHero img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.artistName {
+    position: absolute;
+    top: 11.6rem;
+    mix-blend-mode: exclusion;
+    font-style: italic;
+}
+
+.desc {
+    margin: 40px 20px; 
+    max-width: 50%;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links img {
+    width: 60px;
+    height: 60px; 
+    margin: 0 10px;
+}
+
+@media (min-width: 650px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: start;
+    }
+
+    .singleHero {
+        grid-column: 1 / -1;
+        height: 400px;
+    }
+
+    .singleHero img {
+        height: 400px;
+    }
+
+    .artistName {
+        top: 22.5rem;
+        
+    }
+
+    .desc {
+        grid-column: 1 / 2;
+        grid-row: 2;
+        text-align: left;
+        margin-left: 50px;
+        max-width: 100%;
+        margin-right: auto;
+    }
+
+    .info {
+        grid-column: 2 / 3;
+        grid-row: 2;
+        text-align: start;
+        margin-left: 95px;
+    }
+
+    .links img {
+        width: 80px; 
+        height: 80px;
+    margin: 0 10px; 
+    }
+}
+
+/* 
+        .singleHero{
             width: 100%;
             height: 200px;
         }
@@ -182,7 +284,7 @@ footer{
 #ig:hover{
     content: url("/img/ig_hov.svg");
 }
-    }
+    } */
     @media (min-width: 500px){
     img{
     padding: 5px;
