@@ -8,6 +8,7 @@ const {ikon1} = Astro.props
 const {ikon2} = Astro.props
 const {ikon3} = Astro.props
 const {ikon4} = Astro.props
+import Home from "../components/Home.astro"
 ---
 
 <div class="header">
@@ -23,6 +24,8 @@ const {ikon4} = Astro.props
     </div>
 </div>
 
+<Home home = "/"></Home>
+
 <div class="ikoner">
   <a href="https://www.instagram.com/holdihaand"><img id="ig" src={ikon1} alt="instagram"></a>
   <a href="https://www.facebook.com/profile.php?id=100089966163240"><img id="fb" src={ikon2} alt="facebook"></a>
@@ -31,7 +34,6 @@ const {ikon4} = Astro.props
 </div>
 </div>
 <style>
-
 button{
   font-family: "Arimo", sans-serif;
 }
@@ -106,7 +108,7 @@ button{
     .ikoner{
     display: flex;
     flex-direction: row;
-    position: absolute;
+    position: fixed;
     right: 10px;
     top: 10px;
 }

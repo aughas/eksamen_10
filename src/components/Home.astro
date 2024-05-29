@@ -1,0 +1,55 @@
+---
+const {home} = Astro.props
+---
+
+<a href={home}>
+<img class="logo shrink move" src="/img/logov1.png" alt="logo">
+</a>
+
+<style>
+
+
+.logo{
+            z-index: 1;
+            width: 100px;
+            transform-origin: top;
+    }
+.shrink {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+@media (min-width: 650px){
+
+    @keyframes shrink {
+    from {
+        width: 230px;
+        height: 230px;
+  }
+  to {
+    width: 92px;
+    height: 92px;
+  }
+}
+    .shrink {
+  animation: shrink 0.1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+}
+
+</style>
+
+<script>
+    window.addEventListener(
+  "scroll",
+  () => {
+    document.body.style.setProperty("--scroll", window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+  },
+  false
+);
+</script>
