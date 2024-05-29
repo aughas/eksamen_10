@@ -14,18 +14,18 @@ const {ikon4} = Astro.props
     <div class="dropdown">
     <button class="dropbtn">MENU</button>
     <div class="nav">
-        <a href={link1}>Home</a>
-        <a href={link2}>Om HoldiHånd</a>
-        <a href={link3}>Kunstnere</a>
-        <a href={link4}>Kalender</a>
+        <a href={link1}>HJEM</a>
+        <a href={link2}>OM HOLDIHÅND</a>
+        <a href={link3}>KUNSTNERE</a>
+        <a href={link4}>EVENT KALENDER</a>
     </div>
 </div>
 
 <div class="ikoner">
-  <img id="ig" src={ikon1} alt="instagram">
-  <img id="fb" src={ikon2} alt="facebook">
-  <img id="sp" src={ikon3} alt="spotify">
-  <img id="yt" src={ikon4} alt="youtube">
+  <a href="https://www.instagram.com/holdihaand"><img id="ig" src={ikon1} alt="instagram"></a>
+  <a href="https://www.facebook.com/profile.php?id=100089966163240"><img id="fb" src={ikon2} alt="facebook"></a>
+  <a href="https://open.spotify.com/artist/23O7ZuQSrSCrrlY3Y3SoBN"><img id="sp" src={ikon3} alt="spotify"></a>
+  <a href="https://www.youtube.com/"><img id="yt" src={ikon4} alt="youtube"></a>
 </div>
 </div>
 <style>
@@ -35,7 +35,7 @@ button{
 }
 .dropbtn {
   background-color: var(--lysgrå_col);
-  color: black;
+  color: var(--background_col);
   border: none;
   margin-right: 20px;
   margin-bottom: 20px;
