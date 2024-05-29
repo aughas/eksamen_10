@@ -19,7 +19,7 @@ import Footer from "../components/Footer.astro"
     </div>
         <Banner text = "BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;BOOK MØDE&nbsp;&nbsp;&nbsp;"/>
         <p class="besked">Send et besked for at book et møde. Eller send din demo til:</p>
-        <p><a class="demo" href="mailto:kontakt@holdihaand.dk">kontakt@holdihaand.dk</a></p>
+        <p class="linkcenter"><a class="demo" href="mailto:kontakt@holdihaand.dk">kontakt@holdihaand.dk</a></p>
         <article class="webf">
             <form action="/action_page.php">
                 <div class="text"><input type="text" name="name" value="Navn"><br>
@@ -36,9 +36,11 @@ import Footer from "../components/Footer.astro"
 
    
 <style>
+  .linkcenter{
+    text-align: center;
+  }
   .demo{
     color: var(--accent_col);
-    text-align: center;
     padding-top: 10px
   }
   .besked{
